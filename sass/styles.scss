@@ -43,8 +43,8 @@ header {
 }
 
 .avatar {
-  // width: 100px;
-  // height: 100px;
+  width: 150px;
+  height: 150px;
 
   @include box-shadow(0 0 0px 3px #fff, 0 0 0 4px #ccc, 0 4px 6px #333);
   @include border-radius(50%);
@@ -63,6 +63,33 @@ header, footer {
     top: 1px solid #c9c9c9;
     bottom: 1px solid #c9c9c9;
   }
+}
+
+// Button
+.contact-btn{
+	display: inline-block;
+	margin-top: 3em;
+	padding:1em 3em;
+
+	background: #ea4c89;
+	color: white;
+	text-transform: uppercase;
+	font-family: Helvetica, Arial, sans-serif;
+	@include border-radius(5px);
+
+	@include box-shadow(0 6px 0 darken(#ea4c89, 20%));
+
+	transition: .25s all ease;
+
+	&:hover{
+		@include translate(0, 1px, 0);
+		// transform: translate3d(0, 1px, 0);
+		@include box-shadow(0 5px darken(#ea4c89, 20%) );
+	}
+	&:active{
+		transform: translate3d(0, 5px, 0);
+		@include box-shadow(0 1px darken(#ea4c89, 20%));
+	}
 }
 
 // PROJECTS
@@ -86,11 +113,13 @@ header, footer {
   padding: 0 2%;
   $numberOfShots: 10;
   $shotWidth: 400;
+  $shotHeight: 300;
   $shotMargin: 10;
   $shotPadding: 10;
   $shotBorder: 1;
   $shotUnit: px;
-  width: $numberOfShots * ($shotWidth + ($shotMargin * 2) + ($shotPadding * 2) + ($shotBorder * 2)) + $shotUnit;
+  // width: $numberOfShots * ($shotWidth + ($shotMargin * 2) + ($shotPadding * 2) + ($shotBorder * 2)) + $shotUnit;
+  min-height: $shotHeight + $shotUnit;
 
   li {
     float: left;
@@ -112,6 +141,75 @@ footer {
   }
 }
 
+// Contact Form
+// ****************************************
+.contact{
+	@include translate(0,100%,0);
+	position: fixed;
+	right: 10%;
+	bottom: 0;
+	background: #777;
+	border: 1px solid #555;
+	border-bottom: none;
+	@include border-radius(5px 5px 0 0);
+	padding: 1em;
+
+	input,textarea{
+		width: 250px;
+		padding: 5px;
+		font-size: 1em;
+		margin-bottom: 10px;
+	}
+
+	span.close{
+		opacity: 0;
+		background: #000;
+		color: white;
+		font-weight: bold;
+		font-family: Helvetica, Arial, sans-serif;
+		border: 2px solid white;
+
+		// make it a circle.
+		@include border-radius(50%);
+		width: 1.5em;
+		height: 1.5em;
+
+		// center the text.
+		text-align: center;
+		line-height: 1.5em;
+
+		// position it in the top right corner.
+		position: absolute;
+		top: -.75em;
+		right: -.75em;
+	}
+}
+
+// Lightbox
+// *******************************************
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.5);
+    text-align:center;
+    display: none;
+}
+#lightbox p {
+    text-align:right;
+    color:#fff;
+    margin-right:20px;
+    font-size:12px;
+}
+#lightbox img {
+    @include box-shadow(0 0 25px #111);
+    max-width:640px;
+}
+
 
 
 @import "social";
+@import "animate";
+@import "animations"
