@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 		// Loop over the results and generate our html markup for each <li>
 		for(var i=0; i<numberOfShots; i++){
-			html += '<li>';
+			html += '<li class="col-sm-6 col-md-4 col-lg-3">';
 			html += '<a class="lightboxTrigger" href="' + data.shots[i].imageUrl + '">';
 			html += '<img src="' + data.shots[i].thumb + '" alt="' + data.shots[i].title + '" >';
 			html += '</a>';
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		}
 
 		// Insert our <li>s into the list
-		$('.shots').css("width", width).html(html);
+		$('.shots').html(html);
 	});
 
 	var $avatar = $('.avatar');
@@ -79,7 +79,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$lightbox.hide();
+	// $lightbox.hide();
 
 	// $('#lightbox').on('click', function() { $('#lightbox').hide(); });
 	// }

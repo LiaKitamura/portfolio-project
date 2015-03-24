@@ -7,10 +7,20 @@
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" href="css/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="container">
 	<header>
 		<!-- see: https://en.gravatar.com/site/implement/images/ -->
 		<img class="avatar animated tada" src="http://www.gravatar.com/avatar/276ff70cc15232ed253616fd334c40ad?s=200" alt="">
@@ -20,15 +30,39 @@
 
 	</header>
 
-	<section class="content">
+	<section class="content row">
 		<h1>Latest Projects</h1>
-		<div class="carousel">
-			<div class="shots-container">
-				<ul class="shots">
+		<!-- <div class="carousel"> -->
+			<!-- <div class="shots-container"> -->
+				<ul class="shots col-sm-9 col-sm-push-3">
 					<li><img src="images/loading.gif" alt=""></li>
+					<!-- <li class="col-md-4"></li>
+					<li class="col-md-4"></li>
+					<li class="col-md-4"></li>
+					<li class="col-md-4"></li>
+					<li class="col-md-4"></li>
+					<li class="col-md-4"></li> -->
 				</ul>
-			</div>
-		</div>
+				<div class="sidebar col-sm-3 col-sm-pull-9">
+					<div class="widget">
+						<h3>Categories</h3>
+						<ul>
+							<li>Design</li>
+							<li>Html/CSS</li>
+							<li>JavaScript</li>
+						</ul>
+					</div>
+					<div class="widget">
+						<h3>Archives</h3>
+						<ul>
+							<li>January</li>
+							<li>February</li>
+							<li>March</li>
+						</ul>
+					</div>
+				</div>
+			<!-- </div> -->
+		<!-- </div> -->
 	</section>
 
 	<footer>
@@ -54,7 +88,7 @@
 			<p><input type="submit"></p>
 		</form>
 	</div>
-	
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

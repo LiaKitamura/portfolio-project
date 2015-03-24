@@ -168,40 +168,6 @@ header, footer {
   box-shadow: 0 1px #ba1655;
 }
 
-/* line 101, ../sass/styles.scss */
-.carousel {
-  position: relative;
-}
-
-/* line 104, ../sass/styles.scss */
-.shots-container {
-  width: 100%;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  padding: 1em 0;
-}
-
-/* line 111, ../sass/styles.scss */
-.shots {
-  overflow: hidden;
-  margin: 0;
-  padding: 0 2%;
-  min-height: 300px;
-}
-/* line 125, ../sass/styles.scss */
-.shots li {
-  float: left;
-  width: 400px;
-  height: 300px;
-  margin: 0 10px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-
 /* line 139, ../sass/styles.scss */
 footer p {
   color: #777;
